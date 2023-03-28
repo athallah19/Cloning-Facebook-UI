@@ -1,0 +1,143 @@
+.menu-modal {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+
+    width: 560px;
+
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px lightgray;
+    background-color: #f7f7fa;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    display: none;
+
+    margin-top: 27px;
+}
+
+.menu-modal > span {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.menu-modal > .content {
+    align-items: flex-start;
+}
+
+.social {
+    width: 280px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px lightgray;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    margin-right: 10px;
+}
+
+.modal-search-box {
+    width: 240px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding-left: 18px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.modal-search-box > input {
+    width: 200px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.social > span {
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.social > li {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.social > li >img {
+    margin-right: 5px;
+}
+
+.social > li:hover {
+    background-color: #f2f2f2;
+}
+
+.social > li > div {
+    align-items: flex-start;
+    margin-right: auto;
+}
+
+.social > li > div > span {
+    font-size: 14px;
+}
+
+.social > li > div > p {
+    font-size: 12px;
+    color: gray;
+}
+
+.modal-create {
+    width: 240px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px lightgray;
+
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.modal-create > span {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.modal-create > li {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.modal-create > hr {
+    width: 100%;
+}
+
+.modal-create > li:hover {
+    background-color: #f2f2f2;
+}
+
+.modal-create > li > div {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    overflow: hidden;
+}
+
+.modal-create > li > span {
+    margin-left: 5px;
+    margin-right: auto;
+}

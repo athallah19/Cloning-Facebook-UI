@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" type="image" href="image/favicon.ico">
+
+    <style>
+        @import url('css/default.css');
+        @import url('css/main.css');
+        @import url('css/gnb.css');
+
+        @import url('css/story.css');
+        @import url('css/create.css');
+        @import url('css/feed.css');
+        @import url('css/menu-modal.css');
+        @import url('css/account-modal.css');
+    </style>
+
+    <title>Facebook - Clone </title>
+</head>
+
+<body>
+    <div class="gnb flex-row">
+        <div class="gnb-left flex-row">
+            <img width="40" src="image/logo.png">
+            <div class="search-box flex-row">
+                <i id="search-icon" class="bi bi-search"></i>
+                <input placeholder="athallah_019" type="text" onfocus="hideIcon()" onblur="showIcon()">
+            </div>
+        </div>
+        <div class="gnb-middle flex-row">
+            <div class="nav-tab flex-row">
+                <img src="image/gnb/1.png">
+            </div>
+            <div class="nav-tab flex-row">
+                <img src="image/gnb/2.png">
+            </div>
+            <div class="nav-tab flex-row">
+                <img src="image/gnb/3.png">
+            </div>
+            <div class="nav-tab flex-row">
+                <img src="image/gnb/4.png">
+            </div>
+            <div class="nav-tab flex-row">
+                <img src="image/gnb/5.png">
+            </div>
+        </div>
+        <div class="gnb-right flex-row">
+            <div onclick="menuModal()" class="nav-tab-right flex-row">
+                <img id="gnb-menu" src="image/gnb/6.png">
+            </div>
+            <div class="nav-tab-right flex-row">
+                <img src="image/gnb/7.png">
+            </div>
+            <div class="nav-tab-right flex-row">
+                <img src="image/gnb/8.png">
+            </div>
+            <div onclick="accountModal()" class="nav-tab-right flex-row">
+                <img src="image/gnb/9.png">
+            </div>
+        </div>
+    </div>
+    <div class="main flex-row">
+        <div class="main-left">
+            <li class="flex-row">
+                <div class="flex-row">
+                    <img src="image/feed/1.png">
+                </div>
+                <span>Athallah99</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/2.png">
+                <span>Find friends</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/4.png">
+                <span>Groups</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/3.png">
+                <span>Memories</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/5.png">
+                <span>Watch</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/6.png">
+                <span>Saved</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/7.png">
+                <span>Pages</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/8.png">
+                <span>Events</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/9.png">
+                <span>Most recent</span>
+            </li>
+            <li class="flex-row">
+                <img src="image/feed/10.png">
+                <span>Favorites</span>
+            </li>
+            <li class="flex-row">
+                <div class="see flex-row">
+                    <img src="image/feed/seemore.png" alt="" srcset="">
+                </div>
+                <span>See More</span>
+            </li>
+            <hr>
+        </div>
+        <div class="main-middle">
+            <div class="story">
+                <div class="story-top flex-row">
+                    <div class="flex-row">Stories</div>
+                    <div class="flex-row">Reels</div>
+                    <div class="flex-row">Rooms</div>
+                </div>
+                <div class="story-bottom flex-row">
+                    <div class="profile flex-col">
+                        <div class="profile-image"></div>
+                        <span>Create Story</span>
+                        <div class="plus flex-row">
+                            <img src="image/feed/12.png">
+                        </div>
+                    </div>
+                    <div class="description flex-col">
+                        <li class="flex-row">
+                            <img src="image/feed/13.png">
+                            <span>Share everyday moments with friends and family.</span>
+                        </li>
+                        <li class="flex-row">
+                            <img src="image/feed/14.png">
+                            <span>Stories disapper after 24 hours.</span>
+                        </li>
+                        <li class="flex-row">
+                            <img src="image/feed/15.png">
+                            <span>Replies and reactions and private.</span>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="create flex-col">
+                <div class="create-top flex-row">
+                    <div class="create-profile">
+                        <img src="image/feed/1.png">
+                    </div>
+                    <input onfocus="showButton()" type="text" placeholder="What's on your mind, Athallah99?">
+                </div>
+                <div class="create-bottom flex-row">
+                    <li class="flex-row">
+                        <img src="image/feed/16.png">
+                        <span>Live video</span>
+                    </li>
+                    <li class="flex-row">
+                        <img src="image/feed/17.png">
+                        <span>Photo/video</span>
+                    </li>
+                    <li class="flex-row">
+                        <img src="image/feed/18.png">
+                        <span>Feeling/activity</span>
+                    </li>
+                </div>
+                <button onclick="post()" id="btn-post">Let's Post it!</button>
+            </div>
+            <div class="feed flex-col">
+                <div class="feed-top flex-row">
+                    <div class="feed-profile flex-row">
+                        <img src="image/feed/1.png">
+                    </div>
+                    <div class="feed-name flex-col">
+                        <span>The Greatest Of All Time.</span>
+                        <span>Sponsored <img src="image/feed/21.png"></span>
+                    </div>
+                    <div class="feed-more flex-row">
+                        <img src="image/feed/20.png">
+                    </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sequi rerum voluptate tempora.
+                    Aperiam asperiores maxime eaque?</p>
+                <img width="700" height="367" src="image/messi-feed.jpg">
+
+                <div class="feed-like flex-row">
+                    <img src="image/feed/23.png">
+                    <span class="like-count">10.000.000K</span>
+                    <span>258.000 Shares</span>
+                </div>
+                <div class="feed-button flex-row">
+                    <li class="flex-row">
+                        <img width="24" src="image/feed/24.png">
+                        <span>Like</span>
+                    </li>
+                    <li class="flex-row">
+                        <img width="24" src="image/feed/25.png">
+                        <span>Comment</span>
+                    </li>
+                    <li class="flex-row">
+                        <img width="24" src="image/feed/26.png">
+                        <span>Share</span>
+                    </li>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="menu-modal" id="menu-modal">
+        <span>Menu</span>
+        <div class="content flex-row">
+            <div class="social flex-col">
+                <div class="modal-search-box flex-row">
+                    <i id="search-icon" class="bi bi-search"></i>
+                    <input type="text" name="" id="">
+                </div>
+                <span>Social</span>
+                <li class="flex-row">
+                    <img width="36" src="image/modal/1.png" alt="">
+                    <div class="flex-col">
+                        <span>Events</span>
+                        <p>Organize or find events and other thing to do in online or nearby.</p>
+                    </div>
+                </li>
+                <li class="flex-row">
+                    <img width="36" src="image/modal/2.png" alt="">
+                    <div class="flex-col">
+                        <span>Find friends</span>
+                        <p>Search for friends or people you may know.</p>
+                    </div>
+                </li>
+                <li class="flex-row">
+                    <img width="36" src="image/modal/3.png" alt="">
+                    <div class="flex-col">
+                        <span>Group</span>
+                        <p>Connect with people who share your interests.</p>
+                    </div>
+                </li>
+                <li class="flex-row">
+                    <img width="36" src="image/modal/4.png" alt="">
+                    <div class="flex-col">
+                        <span>News feed</span>
+                        <p>See relevant post from people and pages you follow.</p>
+                    </div>
+                </li>
+                <li class="flex-row">
+                    <img width="36" src="image/modal/5.png" alt="">
+                    <div class="flex-col">
+                        <span>Favorites</span>
+                            <p>View post by Favorites</p>
+                    </div>
+                </li>
+            </div>
+            <div class="modal-create flex-col">
+                <span>Create</span>
+                <li class="flex-row">
+                    <div class="flex-row">
+                        <img width="22" src="image/modal/6.png" alt="">
+                    </div>
+                    <span>Post</span>
+                </li>
+                <li class="flex-row">
+                    <div class="flex-row">
+                        <img  width="22" src="image/modal/7.png" alt="">
+                    </div>
+                    <span>Story</span>
+                </li>
+                <li class="flex-row">
+                    <div class="flex-row">
+                        <img  width="22" src="image/modal/8.png" alt="">
+                    </div>
+                    <span>Room</span>
+                </li>
+                <hr>
+                <li class="flex-row">
+                    <div class="flex-row">
+                        <img  width="22" src="image/modal/9.png" alt="">
+                    </div>
+                    <span>Page</span>
+                </li>
+                <li class="flex-row">
+                    <div class="flex-row">
+                        <img  width="22" src="image/modal/10.png" alt="">
+                    </div>
+                    <span>Add</span>
+                </li>
+                <li class="flex-row">
+                    <div class="flex-row">
+                        <img  width="22" src="image/modal/11.png" alt="">
+                    </div>
+                    <span>Group</span>
+                </li>
+                <li class="flex-row">
+                    <div class="flex-row">
+                        <img  width="22" src="image/modal/12.png" alt="">
+                    </div>
+                    <span>Event</span>
+                </li>
+            </div>
+        </div>
+    </div>
+    <div class="account-modal" id="account-modal">
+        <div class="account-info flex-col">
+            <div class="account-profile flex-row">
+                <div class="flex-row">
+                    <img width="44" src="image/gnb/9.png" alt="">
+                </div>
+                <span>Athallah99</span>
+            </div>
+            <hr>
+            <div class="flex-col">See all profiles</div>
+        </div>
+        <li class="flex-row">
+            <div class="flex-row">
+                <img width="22" src="image/modal/13.png" alt="">
+            </div>
+            <span>Settings & privacy</span>
+            <img width="24" src="image/modal/18.png" alt="">
+        </li>
+        <li class="flex-row">
+            <div class="flex-row">
+                <img width="22" src="image/modal/14.png" alt="">
+            </div>
+            <span>Help & support</span>
+            <img width="24" src="image/modal/18.png" alt="">
+        </li>
+        <li class="flex-row">
+            <div class="flex-row">
+                <img width="22" src="image/modal/15.png" alt="">
+            </div>
+            <span>Display & access</span>
+            <img width="24" src="image/modal/18.png" alt="">
+        </li>
+        <li class="flex-row">
+            <div class="flex-row">
+                <img width="22" src="image/modal/16.png" alt="">
+            </div>
+            <span>Give feedback</span>
+        </li>
+        <li class="flex-row">
+            <div class="flex-row">
+                <img width="22" src="image/modal/17.png" alt="">
+            </div>
+            <span>Log Out</span>
+        </li>
+    </div>
+
+    <script src="my.js"></script>
+</body>
+
+</html>
